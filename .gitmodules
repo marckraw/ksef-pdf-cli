@@ -1,0 +1,4 @@
+[submodule "packages/ksef-pdf-generator"]
+	path = packages/ksef-pdf-generator
+	url = git@github.com:marckraw/ksef-pdf-generator.git
+	branch = main

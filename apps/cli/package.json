@@ -1,0 +1,22 @@
+{
+  "name": "@ksef/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "ksef-pdf": "./src/main.ts"
+  },
+  "scripts": {
+    "build": "bun run typecheck",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@akmf/ksef-fe-invoice-converter": "workspace:*",
+    "pdfmake": "^0.2.20",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "bun-types": "^1.1.34"
+  }
+}
