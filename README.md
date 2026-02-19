@@ -55,6 +55,29 @@ bun run compile:darwin-arm64
 
 Artifacts are written to `dist/`.
 
+## Changesets Release Flow
+
+Create a changeset in every user-facing CLI change PR:
+
+```bash
+bun run changeset
+```
+
+Inspect pending release plan:
+
+```bash
+bun run changeset:status
+```
+
+When changesets are merged into `main`, `.github/workflows/changesets.yml` creates/updates a version PR automatically.
+
+After merging the version PR, create and push a tag (for example `v0.2.0`) to trigger binary publishing:
+
+```bash
+git tag v0.2.0
+git push origin v0.2.0
+```
+
 ## Upstream Sync Flow
 
 Fork repository sync (run in fork repo):
